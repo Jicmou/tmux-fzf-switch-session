@@ -30,7 +30,7 @@ git clone https://github.com/jicmou/tmux-fzf-switch-session ~/clone/path
 Add the following line to your tmux.conf file
 
 ```
-run-shell ~/clone/path/tmux-fzf-switch-session.tmux
+run-shell ~/clone/path/tmux-fzf-switch-session/fzf-witch-session.tmux
 ```
 
 Source your tmux config
