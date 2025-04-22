@@ -6,9 +6,11 @@ else
   TMUX_CMD='switch-client'
 fi
 
-SELECTED_SESSION=$(tmux list-sessions |
-  awk -F ':' '{print $1}' |
-  fzf --preview="tmux lsw -t {}" --tmux=center)
+SELECTED_SESSION=$(
+  tmux list-sessions |
+    awk -F ':' '{print $1}' |
+    fzf-tmux -p --preview="tmux lsw -t {}"
+)
 
 if [ -z "$SELECTED_SESSION" ]; then
   # No session selected, exiting gracefully without warning
